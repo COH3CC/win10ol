@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: '/win10ol/', 
+  base: 'win10ol/', 
   plugins: [
     vue(),
     vueDevTools(),
