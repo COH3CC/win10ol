@@ -18,7 +18,7 @@
 
                         <div v-else class="login-box" @click.stop key="login-view">
                             <div class="user-avatar">
-                                <img src="icons/system/Contact.png" alt="User"></img>
+                                <img src="/icons/system/Contact.png" alt="User"></img>
                             </div>
                             <div class="user-name">Admin</div>
                             <button class="login-button" @click="handleSystemLogin">登录</button>
