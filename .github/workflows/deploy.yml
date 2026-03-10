@@ -17,17 +17,21 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: 26h2/package.json
+          # 修正：根目录下直接找 package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: cd 26h2 && npm ci
+        # 修正：直接运行 npm ci，无需 cd
+        run: npm ci
 
       - name: Build
-        run: cd 26h2 && npm run build
+        # 修正：直接运行 build
+        run: npm run build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./26h2/dist
+          # 修正：通常 Vite/Vue 的默认输出目录是 dist
+          publish_dir: ./dist
           publish_branch: gh-pages
