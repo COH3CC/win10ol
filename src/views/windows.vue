@@ -18,7 +18,7 @@
 
                         <div v-else class="login-box" @click.stop key="login-view">
                             <div class="user-avatar">
-                                <img src="/icons/system/Contact.png" alt="User"></img>
+                                <img src="icons/system/Contact.png" alt="User"></img>
                             </div>
                             <div class="user-name">Admin</div>
                             <button class="login-button" @click="handleSystemLogin">登录</button>
@@ -220,9 +220,9 @@
                                 <button v-if="btn.isCustom" :class="btn.class"
                                     @click.stop="systemStore.executeAction(btn.actionName)">
                                     <div class="tibar-right-infoview-box">
-                                        <img class="tibar-right-infoview-img" src="/icons/system/Wifi.png">
-                                        <img class="tibar-right-infoview-img" src="/icons/system/Volume 3.png">
-                                        <img class="tibar-right-infoview-img" src="/icons/system/Battery 10.png">
+                                        <img class="tibar-right-infoview-img" src="icons/system/Wifi.png">
+                                        <img class="tibar-right-infoview-img" src="icons/system/Volume 3.png">
+                                        <img class="tibar-right-infoview-img" src="icons/system/Battery 10.png">
                                     </div>
                                 </button>
 

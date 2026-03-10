@@ -26,40 +26,40 @@ export const useMenuStore = defineStore("menu", () => {
     const getDesktopMenu = (): MenuItem[] => [
         {
             label: "查看",
-            icon: "/icons/menu/View.png",
+            icon: "icons/menu/View.png",
             action: () => console.log("查看"),
         },
         {
             label: "排序方式",
-            icon: "/icons/menu/Sort.png",
+            icon: "icons/menu/Sort.png",
             action: () => console.log("排序"),
         },
         {
             label: "刷新",
-            icon: "/icons/menu/Refresh.png",
+            icon: "icons/menu/Refresh.png",
             action: () => systemStore.triggerRefresh(),
         },
         { type: "divider" },
         {
             label: "新建",
-            icon: "/icons/menu/Add To1.png",
+            icon: "icons/menu/Add To1.png",
             action: () => console.log("新建"),
         },
         { type: "divider" },
         {
             label: "显示设置",
-            icon: "/icons/menu/System.png",
+            icon: "icons/menu/System.png",
             action: () => systemStore.openWindow("WinSetting", "设置"),
         },
         {
             label: "个性化",
-            icon: "/icons/menu/Personalize.png",
+            icon: "icons/menu/Personalize.png",
             action: () => console.log("个性化"),
         },
         { type: "divider" },
         {
             label: "新建文件夹",
-            icon: "/icons/menu/Add1.png",
+            icon: "icons/menu/Add1.png",
             action: () => {
                 const newFolder = fileStore.createNewFolder("desktop");
                 if (newFolder) {
@@ -70,13 +70,13 @@ export const useMenuStore = defineStore("menu", () => {
         },
         {
             label: "在终端打开",
-            icon: "/icons/menu/Windows Terminal.png",
+            icon: "icons/menu/Windows Terminal.png",
             action: () => console.log("在终端打开"),
         },
         { type: "divider" },
         {
             label: "更多选项",
-            icon: "/icons/menu/More.png",
+            icon: "icons/menu/More.png",
             action: () => console.log("更多"),
         },
     ];
@@ -90,9 +90,9 @@ export const useMenuStore = defineStore("menu", () => {
                 icon: computed(() => {
                     const node = fileStore.findNodeById(contextMenuTargetId.value || "");
                     if (node && node.type === "app") {
-                        return systemStore.getAppIcon(node.id) || "/icons/menu/Open File.png";
+                        return systemStore.getAppIcon(node.id) || "icons/menu/Open File.png";
                     }
-                    return "/icons/menu/Open File.png";
+                    return "icons/menu/Open File.png";
                 }),
                 action: () => {
                     const item = combinedIcons.find(
@@ -103,7 +103,7 @@ export const useMenuStore = defineStore("menu", () => {
             },
             {
                 label: "重命名",
-                icon: "/icons/menu/Rename1.png",
+                icon: "icons/menu/Rename1.png",
                 action: () => {
                     if (contextMenuTargetId.value) {
                         const node = fileStore.findNodeById(contextMenuTargetId.value);
@@ -116,7 +116,7 @@ export const useMenuStore = defineStore("menu", () => {
             },
             {
                 label: "管理员身份运行",
-                icon: "/icons/menu/Admin.png",
+                icon: "icons/menu/Admin.png",
                 action: () => console.log("管理员运行"),
             },
             { type: "divider" },
@@ -130,8 +130,8 @@ export const useMenuStore = defineStore("menu", () => {
                 icon: computed(() => {
                     const node = fileStore.findNodeById(contextMenuTargetId.value || "");
                     return node && systemStore.isAppFixed(node.id)
-                        ? "/icons/menu/Unpin.png"
-                        : "/icons/menu/New File.png";
+                        ? "icons/menu/Unpin.png"
+                        : "icons/menu/New File.png";
                 }),
                 action: () => {
                     if (contextMenuTargetId.value)
@@ -141,7 +141,7 @@ export const useMenuStore = defineStore("menu", () => {
             { type: "divider" },
             {
                 label: "删除",
-                icon: "/icons/menu/Delete.png",
+                icon: "icons/menu/Delete.png",
                 action: () => {
                     if (contextMenuTargetId.value) {
                         fileStore.deleteNode(contextMenuTargetId.value);
@@ -151,7 +151,7 @@ export const useMenuStore = defineStore("menu", () => {
             },
             {
                 label: "属性",
-                icon: "/icons/menu/Info.png",
+                icon: "icons/menu/Info.png",
                 action: () => console.log("属性"),
             },
         ];
@@ -162,7 +162,7 @@ export const useMenuStore = defineStore("menu", () => {
             {
                 label: "打开",
                 isApp: true,
-                icon: systemStore.getAppIcon(item.componentName) || "/icons/menu/Open File.png",
+                icon: systemStore.getAppIcon(item.componentName) || "icons/menu/Open File.png",
                 action: () => handleTaskbarClick(item),
             },
             {
@@ -170,13 +170,13 @@ export const useMenuStore = defineStore("menu", () => {
                     ? "任务栏取消固定"
                     : "固定到任务栏",
                 icon: systemStore.isAppFixed(item.componentName)
-                    ? "/icons/menu/Unpin.png"
-                    : "/icons/menu/New File.png",
+                    ? "icons/menu/Unpin.png"
+                    : "icons/menu/New File.png",
                 action: () => systemStore.togglePinApp(item.componentName),
             },
             {
                 label: "关闭",
-                icon: "/icons/menu/Delete.png",
+                icon: "icons/menu/Delete.png",
                 action: () => {
                     if (item.id !== -1) systemStore.closeWindow(item.id);
                 },
@@ -187,29 +187,29 @@ export const useMenuStore = defineStore("menu", () => {
     const getNotepadWindowMenu = (): MenuItem[] => [
         {
             label: "撤销",
-            icon: "/icons/menu/Undo.png",
+            icon: "icons/menu/Undo.png",
             action: () => console.log("Notepad: 撤销"),
         },
         { type: "divider" },
         {
             label: "剪切",
-            icon: "/icons/menu/Cut.png",
+            icon: "icons/menu/Cut.png",
             action: () => document.execCommand("cut"),
         },
         {
             label: "复制",
-            icon: "/icons/menu/Copy.png",
+            icon: "icons/menu/Copy.png",
             action: () => document.execCommand("copy"),
         },
         {
             label: "粘贴",
-            icon: "/icons/menu/Paste.png",
+            icon: "icons/menu/Paste.png",
             action: () => document.execCommand("paste"),
         },
         { type: "divider" },
         {
             label: "全选",
-            icon: "/icons/menu/Select All.png",
+            icon: "icons/menu/Select All.png",
             action: () => document.execCommand("selectAll"),
         },
     ];

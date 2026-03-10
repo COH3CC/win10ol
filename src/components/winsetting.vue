@@ -20,7 +20,7 @@
                         <div class="search-wrapper">
                             <input type="text" placeholder="搜索设置" class="search-input" />
                             <span class="search-icon">
-                                <img class="search-input-img" src="/icons/Search1.png"></img>
+                                <img class="search-input-img" src="icons/Search1.png"></img>
                             </span>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="setting-title-area-2">
                     <div class="setting-title-area-viewtitle">
                         <button class="setting-title-area-viewtitle-btn" @click="currentCategory = null">
-                            <img class="setting-title-area-viewtitle-img" src="/icons/back2.png" />
+                            <img class="setting-title-area-viewtitle-img" src="icons/back2.png" />
                         </button>
                         <span class="setting-title-area-viewtitle-info">设置</span>
                     </div>
@@ -62,13 +62,13 @@
             <div class="setting-container" :class="{ 'dark-mode': theme === 'dark' }">
                 <aside class="sidebar">
                     <button class="back-btn" @click="currentCategory = null">
-                        <img class="back-btn-img" src="/icons/Home.png" />
+                        <img class="back-btn-img" src="icons/Home.png" />
                         <div class="back-btn-info">主页</div>
                     </button>
                     <div class="sidebar-search">
                         <input type="text" placeholder="搜索设置" class="sidebar-search-input"></input>
                         <span class="search-icon">
-                            <img class="search-icon-img" src="/icons/Search1.png" />
+                            <img class="search-icon-img" src="icons/Search1.png" />
                         </span>
                     </div>
                     <div class="sidebar-title">{{ currentCategory.title }}</div>
@@ -92,7 +92,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Brightness.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Brightness.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">亮度</div>
@@ -103,7 +103,7 @@
                                         <button class="setting-info-right-r" @click="toggleBrightnessDetail">
                                             <img class="setting-info-right-r-img"
                                                 :style="{ transform: showBrightnessDetail ? 'rotate(180deg)' : 'none' }"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Light.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Light.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">夜间模式</div>
@@ -141,7 +141,7 @@
                                             </div>
                                         </div>
                                         <button class="setting-info-right-r" @click="toggleNightmodelDetail">
-                                            <img class="setting-info-right-r-img" src="/icons/Chevron Down.png"
+                                            <img class="setting-info-right-r-img" src="icons/Chevron Down.png"
                                                 :style="{ transform: showNightmodelDetail ? 'rotate(180deg)' : 'none' }" />
                                         </button>
                                     </div>
@@ -171,7 +171,7 @@
                                                 @click="toggleTimeDetail" :disabled="!isTimeNightMode"
                                                 :style="{ opacity: isTimeNightMode ? 1 : 0.5 }">
                                                 <img class="setting-info-right-r-img"
-                                                    src="/public/icons/Chevron Down.png"
+                                                    src="/publicicons/Chevron Down.png"
                                                     :style="{ transform: showTimeDetail ? 'rotate(180deg)' : 'none' }" />
                                             </button>
                                         </div>
@@ -237,7 +237,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Volume 3.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Volume 3.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">主音量</div>
@@ -248,7 +248,7 @@
                                         <button class="setting-info-right-r" @click="toggleSoundDetail">
                                             <img class="setting-info-right-r-img"
                                                 :style="{ transform: showSoundDetail ? 'rotate(180deg)' : 'none' }"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -268,7 +268,7 @@
                             <div class="setting-group-container">
                                 <div class="setting-info-sys">
                                     <div class="setting-info-sys-left">
-                                        <img class="setting-info-sys-left-img" src="/icons/system/Windows 10.png" />
+                                        <img class="setting-info-sys-left-img" src="icons/system/Windows 10.png" />
                                         <div class="setting-info-sys-left-name">Windows 版本</div>
                                     </div>
                                     <div class="setting-info-sys-right">
@@ -277,7 +277,7 @@
                                         </button>
                                         <button class="setting-info-sys-right-btn" @click="toggleWinVersion">
                                             <img class="setting-info-sys-right-btn-img"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -314,7 +314,7 @@
                                     </div>
 
                                     <div class="setting-info-sys-more-right">
-                                        <img class="setting-info-sys-more-right-img" src="/icons/system/st10.png"/>
+                                        <img class="setting-info-sys-more-right-img" src="icons/system/st10.png"/>
                                         <!-- <div class="setting-info-sys-more-right-name">Windows 10</div> -->
                                     </div>
                                 </div>
@@ -323,7 +323,7 @@
                             <div class="setting-group-container">
                                 <div class="setting-info-sys">
                                     <div class="setting-info-sys-left">
-                                        <img class="setting-info-sys-left-img" src="/icons/System.png" />
+                                        <img class="setting-info-sys-left-img" src="icons/System.png" />
                                         <div class="setting-info-sys-left-name">设备信息</div>
                                     </div>
                                     <div class="setting-info-sys-right">
@@ -335,7 +335,7 @@
                                         </button>
                                         <button class="setting-info-sys-right-btn" @click="toggleDeviceInfo">
                                             <img class="setting-info-sys-right-btn-img"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -393,7 +393,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Photo 2.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Photo 2.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">设置背景</div>
@@ -405,7 +405,7 @@
                                             <div class="setting-info-right-modle"
                                                 @click="showWallpaperModeDropdown = !showWallpaperModeDropdown">
                                                 <span class="selected-mode-text">{{ systemStore.backgroundType }}</span>
-                                                <img class="selected-mode-img" src="/icons/Chevron Down.png"
+                                                <img class="selected-mode-img" src="icons/Chevron Down.png"
                                                     :style="{ transform: showWallpaperModeDropdown ? 'rotate(180deg)' : 'none' }" />
                                             </div>
 
@@ -420,7 +420,7 @@
                                         <button class="setting-info-right-r" @click="toggleWallpaperDetail">
                                             <img class="setting-info-right-r-img"
                                                 :style="{ transform: showWallpaperDetail ? 'rotate(180deg)' : 'none' }"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                                 <img :src="img" loading="lazy" />
                                             </div>
                                             <div class="wallpaper-add">
-                                                <img class="wallpaper-add-btn" src="/icons/Add.png" />
+                                                <img class="wallpaper-add-btn" src="icons/Add.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -471,7 +471,7 @@
                                     <div class="setting-info-wall-right">
                                         <div class="setting-info-right-modle">
                                             <span class="selected-mode-text">填充</span>
-                                            <img class="selected-mode-img" src="/icons/Chevron Down.png" />
+                                            <img class="selected-mode-img" src="icons/Chevron Down.png" />
                                         </div>
                                     </div>
                                 </div>
@@ -499,7 +499,7 @@
                                                 <div class="setting-info-left">
                                                     <div class="setting-info-left-l">
                                                         <img class="setting-info-left-l-img"
-                                                            src="/icons/Photo 2.png" />
+                                                            src="icons/Photo 2.png" />
                                                     </div>
                                                     <div class="setting-info-left-r">
                                                         <div class="setting-info-left-r-top">背景</div>
@@ -515,7 +515,7 @@
                                                 <div class="setting-info-left">
                                                     <div class="setting-info-left-l">
                                                         <img class="setting-info-left-l-img"
-                                                            src="/icons/Photo 2.png" />
+                                                            src="icons/Photo 2.png" />
                                                     </div>
                                                     <div class="setting-info-left-r">
                                                         <div class="setting-info-left-r-top">颜色</div>
@@ -535,7 +535,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Personalize.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Personalize.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">更改主题</div>
@@ -546,7 +546,7 @@
                                         <button class="setting-info-right-r" @click="toggleThemeDetail">
                                             <img class="setting-info-right-r-img"
                                                 :style="{ transform: showThemeDetail ? 'rotate(180deg)' : 'none' }"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -583,7 +583,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Brightness.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Brightness.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">更改模式</div>
@@ -595,7 +595,7 @@
                                             <div class="setting-info-right-modle"
                                                 @click="showThemeModeDropdown = !showThemeModeDropdown">
                                                 <span class="selected-mode-text">{{ systemStore.theme === 'light' ? '浅色':'深色' }}</span>
-                                                <img class="selected-mode-img" src="/icons/Chevron Down.png"
+                                                <img class="selected-mode-img" src="icons/Chevron Down.png"
                                                     :style="{ transform: showThemeModeDropdown ? 'rotate(180deg)' : 'none' }" />
                                             </div>
                                             <div v-if="showThemeModeDropdown" class="win10-dropdown-menu">
@@ -618,7 +618,7 @@
                                 <div class="setting-info">
                                     <div class="setting-info-left">
                                         <div class="setting-info-left-l">
-                                            <img class="setting-info-left-l-img" src="/icons/Photo 2.png" />
+                                            <img class="setting-info-left-l-img" src="icons/Photo 2.png" />
                                         </div>
                                         <div class="setting-info-left-r">
                                             <div class="setting-info-left-r-top">背景</div>
@@ -631,7 +631,7 @@
                                                 @click="showLockWallpaperModeDropdown = !showLockWallpaperModeDropdown">
                                                 <span class="selected-mode-text">{{ systemStore.lockBackgroundType
                                                     }}</span>
-                                                <img class="selected-mode-img" src="/icons/Chevron Down.png"
+                                                <img class="selected-mode-img" src="icons/Chevron Down.png"
                                                     :style="{ transform: showLockWallpaperModeDropdown ? 'rotate(180deg)' : 'none' }" />
                                             </div>
 
@@ -646,7 +646,7 @@
                                         <button class="setting-info-right-r" @click="togglelockWallpaperDetail">
                                             <img class="setting-info-right-r-img"
                                                 :style="{ transform: showlockWallpaperDetail ? 'rotate(180deg)' : 'none' }"
-                                                src="/icons/Chevron Down.png" />
+                                                src="icons/Chevron Down.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -677,7 +677,7 @@
                                                 <img :src="img" loading="lazy" />
                                             </div>
                                             <div class="wallpaper-add">
-                                                <img class="wallpaper-add-btn" src="/icons/Add.png" />
+                                                <img class="wallpaper-add-btn" src="icons/Add.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -739,71 +739,71 @@ const currentSub = ref<string>('');
 const menuItems = [
     {
         id: 'sys',
-        icon: '/icons/System.png',
+        icon: 'icons/System.png',
         title: '系统',
         desc: '显示、声音、系统信息',
         subs: [
-            { name: '显示', icon: '/icons/TVMonitor.png' },
-            { name: '声音', icon: '/icons/Volume 3.png' },
-            { name: '系统信息', icon: '/icons/Error.png' }
+            { name: '显示', icon: 'icons/TVMonitor.png' },
+            { name: '声音', icon: 'icons/Volume 3.png' },
+            { name: '系统信息', icon: 'icons/Error.png' }
         ]
     },
     {
         id: 'dev',
-        icon: '/icons/Devices.png',
+        icon: 'icons/Devices.png',
         title: '设备',
         desc: '蓝牙、打印机、鼠标',
         subs: ['蓝牙和其他设备', '打印机和扫描仪']
     },
     {
         id: 'net',
-        icon: '/icons/Globe.png',
+        icon: 'icons/Globe.png',
         title: '网络和 Internet',
         desc: 'WLAN、飞机模式、VPN',
         subs: ['状态', 'WLAN', '以太网']
     },
     {
         id: 'per',
-        icon: '/icons/Personalize.png',
+        icon: 'icons/Personalize.png',
         title: '个性化',
         desc: '背景、锁屏、颜色',
         subs: [
-            { name: '背景', icon: '/icons/Photo 2.png' },
-            { name: '主题', icon: '/icons/Personalize.png' },
-            { name: '锁屏界面', icon: '/icons/Lockscreen Desktop.png' },
+            { name: '背景', icon: 'icons/Photo 2.png' },
+            { name: '主题', icon: 'icons/Personalize.png' },
+            { name: '锁屏界面', icon: 'icons/Lockscreen Desktop.png' },
         ]
     },
     {
         id: 'apps',
-        icon: '/icons/All Apps.png',
+        icon: 'icons/All Apps.png',
         title: '应用',
         desc: '卸载、默认应用、可选功能',
         subs: ['应用和功能', '默认应用']
     },
     {
         id: 'game',
-        icon: '/icons/Game.png',
+        icon: 'icons/Game.png',
         title: '游戏',
         desc: '游戏栏、捕获、广播',
         subs: ['游戏栏', '捕获']
     },
     {
         id: 'acc',
-        icon: '/icons/Ease Of Access.png',
+        icon: 'icons/Ease Of Access.png',
         title: '辅助功能',
         desc: '讲述人、放大镜、高对比度',
         subs: ['讲述人', '放大镜']
     },
     {
         id: 'time',
-        icon: '/icons/Time Language.png',
+        icon: 'icons/Time Language.png',
         title: '时间和语言',
         desc: '区域、语言、语音',
         subs: ['日期和时间', '语言']
     },
     {
         id: 'acc_user',
-        icon: '/icons/Contact.png',
+        icon: 'icons/Contact.png',
         title: '账户',
         desc: '你的信息、同步设置',
         subs: ['你的信息', '电子邮件和账户']
@@ -1473,10 +1473,10 @@ watch(isTimeNightMode, (newVal) => {
     cursor: pointer;
 }
 .info-popup-menu-info-low-3-btn-l {
-    background-image: url('/icons/Volume 3.png');
+    background-image: url('icons/Volume 3.png');
 }
 .info-popup-menu-info-low-3-btn-r {
-    background-image: url('/icons/Chevron Right.png');
+    background-image: url('icons/Chevron Right.png');
 }
 
 

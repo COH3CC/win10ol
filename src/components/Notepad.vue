@@ -17,12 +17,12 @@
                                     </div>
                                 </div>
                                 <button class="top-label-big-closeview-btn" @click.stop="closeTab(index)">
-                                    <img class="top-label-big-closeview-btn-img" src="/icons/Cancel.png">
+                                    <img class="top-label-big-closeview-btn-img" src="icons/Cancel.png">
                                 </button>
                             </div>
                             <button class="top-label-big-addbtn" @click.stop="addNewTab" style="flex-shrink: 0;"
                                 @mousedown.stop>
-                                <img class="top-label-big-addbtn-img" src="/icons/Add.png">
+                                <img class="top-label-big-addbtn-img" src="icons/Add.png">
                             </button>
                         </div>
                     </div>
@@ -38,52 +38,52 @@
                 <div class="txt-content-top">
                     <div class="txt-content-top-left">
                         <button class="txt-content-top-le-btn" @click.stop="toggleMenu">
-                            <img class="txt-content-top-le-btn-img" src="/icons/Global Navigation Button.png" />
+                            <img class="txt-content-top-le-btn-img" src="icons/Global Navigation Button.png" />
                         </button>
 
                         <Transition name="menu-fade">
                             <div v-if="isMenuOpen" class="txt-dropdown-menu">
                                 <div class="menu-item" @click="handleMenuAction('new')">
-                                    <img class="menu-item-icon" src="/icons/Add1.png"></img>
+                                    <img class="menu-item-icon" src="icons/Add1.png"></img>
                                     <span class="menu-item-label">新建文件</span>
                                 </div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Favicon.png" />
+                                    <img class="menu-item-icon" src="icons/Favicon.png" />
                                     <span class="menu-item-label">新建窗口</span>
                                 </div>
                                 <div class="menu-item" @click="handleMenuAction('open')">
-                                    <img class="menu-item-icon" src="/icons/Open File.png" />
+                                    <img class="menu-item-icon" src="icons/Open File.png" />
                                     <span class="menu-item-label">打开文件</span>
                                 </div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/History.png" />
+                                    <img class="menu-item-icon" src="icons/History.png" />
                                     <span class="menu-item-label">最近文件</span>
                                 </div>
                                 <div class="menu-item divider"></div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Save.png" />
+                                    <img class="menu-item-icon" src="icons/Save.png" />
                                     <span class="menu-item-label">保存</span>
                                 </div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Save As.png" />
+                                    <img class="menu-item-icon" src="icons/Save As.png" />
                                     <span class="menu-item-label">另存为</span>
                                 </div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Save Copy.png" />
+                                    <img class="menu-item-icon" src="icons/Save Copy.png" />
                                     <span class="menu-item-label">全部保存</span>
                                 </div>
                                 <div class="menu-item divider"></div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Search1.png" />
+                                    <img class="menu-item-icon" src="icons/Search1.png" />
                                     <span class="menu-item-label">查找</span>
                                 </div>
                                 <div class="menu-item">
-                                    <img class="menu-item-icon" src="/icons/Search1.png" />
+                                    <img class="menu-item-icon" src="icons/Search1.png" />
                                     <span class="menu-item-label">替换</span>
                                 </div>
                                 <div class="menu-item divider"></div>
                                 <div class="menu-item" @click="handleMenuAction('info')">
-                                    <img class="menu-item-icon" src="/icons/Setting.png" />
+                                    <img class="menu-item-icon" src="icons/Setting.png" />
                                     <span class="menu-item-label">设置</span>
                                 </div>
                             </div>
@@ -92,20 +92,20 @@
                     <div class="txt-content-top-middle">
                         <button class="txt-content-top-middle-btn">
                             <span class="txt-content-top-middle-btn-name">H1</span>
-                            <img class="txt-content-mid-img" src="/icons/Chevron Down.png" />
+                            <img class="txt-content-mid-img" src="icons/Chevron Down.png" />
                         </button>
                         <button class="txt-content-top-middle-btn">
-                            <img class="txt-content-mid-img-2" src="/icons/Notepad/Bulleted List.png" />
-                            <img class="txt-content-mid-img" src="/icons/Chevron Down.png" />
+                            <img class="txt-content-mid-img-2" src="icons/Notepad/Bulleted List.png" />
+                            <img class="txt-content-mid-img" src="icons/Chevron Down.png" />
                         </button>
                         <button class="txt-content-top-middle-btn-3">
-                            <img class="txt-content-mid-img-2" src="/icons/Notepad/Bold.png" />
+                            <img class="txt-content-mid-img-2" src="icons/Notepad/Bold.png" />
                         </button>
                         <button class="txt-content-top-middle-btn-3">
-                            <img class="txt-content-mid-img-2" src="/icons/Notepad/Italic.png" />
+                            <img class="txt-content-mid-img-2" src="icons/Notepad/Italic.png" />
                         </button>
                         <button class="txt-content-top-middle-btn-3">
-                            <img class="txt-content-mid-img-2" src="/icons/Notepad/Link.png" />
+                            <img class="txt-content-mid-img-2" src="icons/Notepad/Link.png" />
                         </button>
                     </div>
                     <div class="txt-content-top-right"></div>
@@ -137,7 +137,7 @@
                     <div class="top-bar-area">
                         <div class="info-top-header" style="display: flex;  flex: 1;align-items: center;">
                             <button class="info-back-icon-btn" @click="closeInfoPage">
-                                <img src="/icons/back1.png"
+                                <img src="icons/back1.png"
                                     style="width: 14px;height: 14px; transform: rotate(0deg); filter: grayscale(1); opacity: 0.8;" />
                             </button>
                             <span class="info-top-header-info">设置</span>
@@ -157,7 +157,7 @@
                 <div class="page-info-overlay-l-setting-info">
                     <div class="setting-info-left">
                         <div class="setting-info-left-l">
-                            <img class="setting-info-left-l-img" src="/icons/Light.png" />
+                            <img class="setting-info-left-l-img" src="icons/Light.png" />
                         </div>
                         <div class="setting-info-left-r">
                             <div class="setting-info-left-r-top">更改模式</div>
@@ -169,7 +169,7 @@
                             <div class="setting-info-right-modle" @click="toggleThemeDropdown">
                                 <span class="selected-mode-text">{{ systemStore.theme === 'light' ? '浅色' : '深色'
                                 }}</span>
-                                <img class="selected-mode-img" src="/icons/Chevron Down.png"
+                                <img class="selected-mode-img" src="icons/Chevron Down.png"
                                     :style="{ transform: showThemeDropdown ? 'rotate(180deg)' : 'none' }" />
                             </div>
 
@@ -294,8 +294,8 @@ const mockOpenFile = () => {
 };
 
 const getTabIcon = (type: PageType) => {
-    if (type === 'home') return '/public/icons/Home.png';
-    return '/public/icons/Page.png';
+    if (type === 'home') return '/publicicons/Home.png';
+    return '/publicicons/Page.png';
 };
 
 // 动态计算标签样式

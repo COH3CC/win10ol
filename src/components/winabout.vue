@@ -4,7 +4,7 @@
             <!-- 顶部 Logo 和 标题 -->
             <div class="about-hero">
                 <div class="hero-logo-wrapper">
-                    <img src="/icons/system/Windows 10.png" class="hero-logo" alt="Windows Logo" />
+                    <img src="icons/system/Windows 10.png" class="hero-logo" alt="Windows Logo" />
                 </div>
                 <div class="hero-text">
                     <h1 class="project-name">Windows 10 Web Edition</h1>

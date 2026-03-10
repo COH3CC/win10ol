@@ -1,17 +1,17 @@
 <template>
     <div class="window-controls" @mousedown.stop>
         <button class="control-btn minimize" @click.stop="minimize">
-            <img class="control-btn-img" src="/icons/system/Remove.png"></img>
+            <img class="control-btn-img" src="icons/system/Remove.png"></img>
         </button>
         <button class="control-btn maximize" @click.stop="toggleMaximize">
             <img 
                 class="control-btn-img" 
-                :src="isMaximized ? '/icons/system/Chrome Restore.png' : '/icons/system/Chrome Maximize.png'" 
+                :src="isMaximized ? 'icons/system/Chrome Restore.png' : 'icons/system/Chrome Maximize.png'" 
                 alt="maximize"
             >
         </button>
         <button class="control-btn close" @click.stop="close">
-            <img class="control-btn-img" src="/icons/system/close.png"></img>
+            <img class="control-btn-img" src="icons/system/close.png"></img>
         </button>
     </div>
 </template>

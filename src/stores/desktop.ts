@@ -35,16 +35,16 @@ export const useDesktopStore = defineStore("desktop", () => {
         const desktopNode = fileStore.findNodeById("desktop");
         if (desktopNode && desktopNode.children) {
             desktopNode.children.forEach((child) => {
-                let icon = child.icon || "/icons/application/computer.png";
+                let icon = child.icon || "icons/application/computer.png";
                 if (!child.icon) {
                     if (child.type === "folder") {
                         if (child.children && child.children.length > 0) {
-                            icon = "/icons/file-explorer/fileicon/162.png";
+                            icon = "icons/file-explorer/fileicon/162.png";
                         } else {
-                            icon = "/icons/file-explorer/fileicon/emptyfile.png";
+                            icon = "icons/file-explorer/fileicon/emptyfile.png";
                         }
                     }
-                    if (child.name.endsWith(".exe")) icon = "/icons/184.png";
+                    if (child.name.endsWith(".exe")) icon = "icons/184.png";
                 }
                 list.push({
                     id: child.id,

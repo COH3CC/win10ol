@@ -21,12 +21,12 @@
                                     </div>
                                 </div>
                                 <button class="top-label-big-closeview-btn" @click.stop="store.closeTab(index)">
-                                    <img class="top-label-big-closeview-btn-img" src="/icons/Cancel.png"></img>
+                                    <img class="top-label-big-closeview-btn-img" src="icons/Cancel.png"></img>
                                 </button>
                             </div>
 
                             <button class="top-label-big-addbtn" @click="store.addNewTab" style="flex-shrink: 0;">
-                                <img class="top-label-big-addbtn-img" src="/public/icons/Add.png"></img>
+                                <img class="top-label-big-addbtn-img" src="/publicicons/Add.png"></img>
                             </button>
                         </div>
                     </div>
@@ -45,13 +45,13 @@
                         <img class="toolbar-left-button-img" :src="btn.icon" :alt="btn.title" />
                     </button>
                     <div class="content-view-top-left-stop">
-                        <img class="content-view-top-left-stop-img" src="/icons/file-explorer/buttonicon/picture.png">
+                        <img class="content-view-top-left-stop-img" src="icons/file-explorer/buttonicon/picture.png">
                     </div>
                 </div>
                 <div class="toolbar-middle" ref="addressBarRef" @click.self="store.startEditingPath">
                     <img class="toolbar-middle-img" :src="store.getFileIcon(store.currentNode)"
                         @click="store.startEditingPath"></img>
-                    <img class="toolbar-middle-span-img-2" src="/icons/Chevron Right1.png"
+                    <img class="toolbar-middle-span-img-2" src="icons/Chevron Right1.png"
                         @click="store.startEditingPath"></img>
 
                     <div class="toolbar-middle-address"
@@ -59,7 +59,7 @@
                         <template v-if="!uiState.addressBar.isEditing">
                             <template v-for="(crumb, index) in store.breadcrumbs" :key="crumb.id">
                                 <span class="toolbar-middle-span" v-if="index > 0">
-                                    <img class="toolbar-middle-span-img" src="/icons/Chevron Right1.png"></img>
+                                    <img class="toolbar-middle-span-img" src="icons/Chevron Right1.png"></img>
                                 </span>
                                 <span class="toolbar-middle-add-name" @click.stop="store.navigateTo(crumb.id)"
                                     style="cursor: pointer; width: auto; padding: 0 8px;">
@@ -78,7 +78,7 @@
                 <div class="toolbar-right">
                     <button class="toolbar-right-search">
                         <img class="toolbar-right-search-img"
-                            src="/icons/file-explorer/navigaticon/Search.png"></img>
+                            src="icons/file-explorer/navigaticon/Search.png"></img>
                     </button>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                         <div class="sidebar-container-top" @click="store.navigateTo('home')"
                             :class="{ 'is-active': store.isNodeActive('home') }">
                             <div v-if="activeTab.currentPathId === 'home'" class="sidebar-container-top-line"></div>
-                            <img class="sidebar-container-top-img" src="/icons/Home1.png"></img>
+                            <img class="sidebar-container-top-img" src="icons/Home1.png"></img>
                             <div class="sidebar-container-top-name">主页</div>
                         </div>
 
@@ -105,7 +105,7 @@
                                     <div v-if="store.isNodeActive(item.id)" class="sidebar-container-top-line"></div>
                                     <img class="sidebar-container-below-tab-img" :src="store.getFileIcon(item)"></img>
                                     <div class="sidebar-container-below-tab-name">{{ item.name }}</div>
-                                    <img class="sidebar-container-below-tab-img2" src="/icons/005.png"></img>
+                                    <img class="sidebar-container-below-tab-img2" src="icons/005.png"></img>
                                 </div>
                             </template>
                         </div>
@@ -120,11 +120,11 @@
                                     <img class="content-view-top-left-button-img1" :src="store.newButton?.icon" />
                                     <div class="content-view-top-left-button-name">{{ store.newButton?.title }}</div>
                                 </button>
-                                <img class="content-view-top-left-button-img2" src="/icons/Chevron Down.png" />
+                                <img class="content-view-top-left-button-img2" src="icons/Chevron Down.png" />
                             </div>
                             <div class="content-view-top-left-stop">
                                 <img class="content-view-top-left-stop-img"
-                                    src="/icons/file-explorer/buttonicon/picture.png">
+                                    src="icons/file-explorer/buttonicon/picture.png">
                             </div>
                             <div class="content-view-top-left-2">
                                 <button v-for="btn in store.toolbarActionButtons" :key="btn.name"
@@ -135,7 +135,7 @@
                             </div>
                             <div class="content-view-top-left-stop">
                                 <img class="content-view-top-left-stop-img"
-                                    src="/icons/file-explorer/buttonicon/picture.png">
+                                    src="icons/file-explorer/buttonicon/picture.png">
                             </div>
                             <template v-for="(btn, index) in store.toolbarDropdownButtons.slice(1)" :key="btn.id">
                                 <div :class="btn.class" style="position: relative;">
@@ -143,7 +143,7 @@
                                         <img class="content-view-top-left-button-img1" :src="btn.icon"></img>
                                         <div class="content-view-top-left-button-name">{{ btn.title }}</div>
                                     </button>
-                                    <img src="/icons/Chevron Down.png"
+                                    <img src="icons/Chevron Down.png"
                                         class="content-view-top-left-button-img2"></img>
 
                                     <div v-if="uiState.openMenu === btn.menuKey" class="view-popup-menu">
@@ -168,7 +168,7 @@
                                     <button class="content-view-view-top-btn" @click="toggleGroup(group.id)">
                                         <div class="content-view-view-top-name">{{ group.title }}</div>
                                     </button>
-                                    <img src="/icons/Chevron Left.png" class="content-view-view-top-img"
+                                    <img src="icons/Chevron Left.png" class="content-view-view-top-img"
                                         :style="{ transform: uiState.collapsedGroups.has(group.id) ? 'rotate(-90deg)' : 'rotate(0deg)' }"></img>
                                 </div>
 
@@ -253,7 +253,7 @@
                                                 <div class="tv-item-desc-row">{{ store.getFileDisplayType(file) }}</div>
                                             </div>
                                             <img v-if="file.type !== 'file' && file.type !== 'app'"
-                                                class="tv-item-arrow" src="/icons/005.png"></img>
+                                                class="tv-item-arrow" src="icons/005.png"></img>
                                         </div>
                                     </template>
                                     <div v-else class="empty-folder-hint">此文件夹为空</div>
@@ -318,7 +318,7 @@ const getTileIcon = (file: FileSystemNode) => {
     // 只有当图标是默认空文件夹图标，且文件夹内有内容时，才替换为非空文件夹图标
     // 这样可以保留特殊文件夹（如下载、文档等）的自定义图标
     if (icon.includes('emptyfile.png') && file.children && file.children.length > 0) {
-        return '/icons/file-explorer/fileicon/162.png';
+        return 'icons/file-explorer/fileicon/162.png';
     }
     return icon;
 };

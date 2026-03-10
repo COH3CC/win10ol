@@ -316,7 +316,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
                     parentId: "desktop",
                     name: "关于项目",
                     type: "app",
-                    icon: "/appicons/about.png",
+                    icon: "appicons/about.png",
                     updatedAt: DEFAULT_DATE,
                 },
                 {
@@ -398,16 +398,16 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
 
     // 图标系统
     const ICON_ASSETS = {
-        home: "/icons/file-explorer/fileicon/Home1.png",
-        folder: "/icons/file-explorer/fileicon/emptyfile.png",
-        drive: "/icons/file-explorer/fileicon/C.png",
-        drive_data: "/icons/file-explorer/fileicon/D.png",
-        unknown_file: "/icons/file-explorer/fileicon/unknow.png",
-        desktop: "/icons/file-explorer/fileicon/desktop.png",
-        download: "/icons/file-explorer/fileicon/download.png",
-        docs: "/icons/file-explorer/fileicon/document.png",
-        music: "/icons/file-explorer/fileicon/music.png",
-        video: "/icons/file-explorer/fileicon/video.png",
+        home: "icons/file-explorer/fileicon/Home1.png",
+        folder: "icons/file-explorer/fileicon/emptyfile.png",
+        drive: "icons/file-explorer/fileicon/C.png",
+        drive_data: "icons/file-explorer/fileicon/D.png",
+        unknown_file: "icons/file-explorer/fileicon/unknow.png",
+        desktop: "icons/file-explorer/fileicon/desktop.png",
+        download: "icons/file-explorer/fileicon/download.png",
+        docs: "icons/file-explorer/fileicon/document.png",
+        music: "icons/file-explorer/fileicon/music.png",
+        video: "icons/file-explorer/fileicon/video.png",
         apps: {
             "this-pc-app": "109.png",
             "settings-app": "27.png",
@@ -416,17 +416,17 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
             Txtreader: "22.png",
         } as Record<string, string>,
         extensions: {
-            txt: "/icons/102.png",
-            doc: "/icons/112.png",
-            docx: "/icons/112.png",
-            xls: "/icons/112.png",
-            mp3: "/icons/108.png",
-            mp4: "/icons/189.png",
-            exe: "/icons/184.png",
-            png: "/icons/132.png",
-            jpg: "/icons/132.png",
-            jpeg: "/icons/132.png",
-            zip: "/icons/4.png",
+            txt: "icons/102.png",
+            doc: "icons/112.png",
+            docx: "icons/112.png",
+            xls: "icons/112.png",
+            mp3: "icons/108.png",
+            mp4: "icons/189.png",
+            exe: "icons/184.png",
+            png: "icons/132.png",
+            jpg: "icons/132.png",
+            jpeg: "icons/132.png",
+            zip: "icons/4.png",
         } as Record<string, string>,
     };
     const getFileIcon = (node: FileSystemNode | null | undefined): string => {
@@ -688,14 +688,14 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
     const navigationButtons = computed(() => [
         {
             name: "back",
-            icon: "/icons/file-explorer/navigaticon/back1.png",
+            icon: "icons/file-explorer/navigaticon/back1.png",
             handler: goBack,
             disabled: activeTab.value.historyIndex <= 0,
             title: "后退",
         },
         {
             name: "forward",
-            icon: "/icons/file-explorer/navigaticon/For1.png",
+            icon: "icons/file-explorer/navigaticon/For1.png",
             handler: goForward,
             disabled:
                 activeTab.value.historyIndex >= activeTab.value.historyStack.length - 1,
@@ -703,7 +703,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
         },
         {
             name: "up",
-            icon: "/icons/file-explorer/navigaticon/up1.png",
+            icon: "icons/file-explorer/navigaticon/up1.png",
             handler: goUp,
             disabled:
                 !currentNode.value?.parentId &&
@@ -712,7 +712,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
         },
         {
             name: "refresh",
-            icon: "/icons/file-explorer/navigaticon/Refresh1.png",
+            icon: "icons/file-explorer/navigaticon/Refresh1.png",
             handler: refresh,
             disabled: false,
             title: "刷新",
@@ -747,21 +747,21 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
     const toolbarActionButtons = computed(() => [
         {
             name: "cut",
-            icon: "/icons/file-explorer/toolbaricon/Cut.png",
+            icon: "icons/file-explorer/toolbaricon/Cut.png",
             handler: handleToolbarCut,
             title: "剪切",
             disabled: !selectionState.selectedItemId,
         },
         {
             name: "copy",
-            icon: "/icons/file-explorer/toolbaricon/Copy.png",
+            icon: "icons/file-explorer/toolbaricon/Copy.png",
             handler: handleToolbarCopy,
             title: "复制",
             disabled: !selectionState.selectedItemId,
         },
         {
             name: "paste",
-            icon: "/icons/file-explorer/toolbaricon/Paste.png",
+            icon: "icons/file-explorer/toolbaricon/Paste.png",
             handler: handleToolbarPaste,
             title: "粘贴",
             disabled: !clipboardState.sourceNode,
@@ -769,14 +769,14 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
         },
         {
             name: "rename",
-            icon: "/icons/file-explorer/toolbaricon/Rename.png",
+            icon: "icons/file-explorer/toolbaricon/Rename.png",
             handler: handleToolbarRename,
             title: "重命名",
             disabled: !selectionState.selectedItemId,
         },
         {
             name: "delete",
-            icon: "/icons/file-explorer/toolbaricon/Delete.png",
+            icon: "icons/file-explorer/toolbaricon/Delete.png",
             handler: handleDelete,
             title: "删除",
             disabled: !selectionState.selectedItemId,
@@ -873,7 +873,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
             id: "new",
             class: "content-view-top-left-1",
             title: "新建",
-            icon: "/icons/file-explorer/toolbaricon/Add To.png",
+            icon: "icons/file-explorer/toolbaricon/Add To.png",
             handler: handleCreateNewFolder,
             hasDropdown: true,
             menuKey: null,
@@ -882,7 +882,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
             id: "sort",
             class: "content-view-top-left-3",
             title: "排序",
-            icon: "/icons/file-explorer/toolbaricon/Sort.png",
+            icon: "icons/file-explorer/toolbaricon/Sort.png",
             handler: () => toggleMenu("sort"),
             hasDropdown: true,
             menuKey: "sort",
@@ -896,7 +896,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
             id: "view",
             class: "content-view-top-left-4",
             title: "查看",
-            icon: "/icons/file-explorer/toolbaricon/All Apps.png",
+            icon: "icons/file-explorer/toolbaricon/All Apps.png",
             handler: () => toggleMenu("view"),
             hasDropdown: true,
             menuKey: "view",
@@ -909,7 +909,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
             id: "more",
             class: "content-view-top-left-5",
             title: "更多",
-            icon: "/icons/file-explorer/toolbaricon/More.png",
+            icon: "icons/file-explorer/toolbaricon/More.png",
             handler: () => toggleMenu("more"),
             hasDropdown: true,
             menuKey: "more",
@@ -1300,36 +1300,36 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
         return [
             { 
                 label: "打开",
-                icon: isOpenApp ? getFileIcon(target) : "/icons/menu/Open File.png",
+                icon: isOpenApp ? getFileIcon(target) : "icons/menu/Open File.png",
                 action: "open",
                 isApp: isOpenApp ?? undefined
             },
             { label: "下载", 
-              icon: "/icons/menu/Download.png",
+              icon: "icons/menu/Download.png",
               action: "download" },
             { isDivider: true },
             {
                 label: "剪切",
-                icon: "/icons/menu/Cut.png",
+                icon: "icons/menu/Cut.png",
                 action: "cut",
                 disabled: !selectionState.selectedItemId,
             },
             {
                 label: "复制",
-                icon: "/icons/menu/Copy.png",
+                icon: "icons/menu/Copy.png",
                 action: "copy",
                 disabled: !selectionState.selectedItemId,
             },
             {
                 label: "重命名",
-                icon: "/icons/menu/Rename1.png",
+                icon: "icons/menu/Rename1.png",
                 action: "rename",
                 disabled: !selectionState.selectedItemId,
             },
             { isDivider: true },
             {
                 label: "删除",
-                icon: "/icons/menu/Delete.png",
+                icon: "icons/menu/Delete.png",
                 action: "delete",
                 disabled: !selectionState.selectedItemId,
                 style: { color: "#e81123" },
@@ -1339,7 +1339,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
     const blankMenuOptions = computed((): MenuOption[] => [
         {
             label: "粘贴",
-            icon: "/icons/Paste1.png",
+            icon: "icons/Paste1.png",
             action: "paste",
             disabled: !clipboardState.sourceNode,
             style: { opacity: clipboardState.sourceNode ? 1 : 0.5 },
@@ -1347,18 +1347,18 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
         { isDivider: true },
         {
             label: "新建文件夹",
-            icon: "/icons/menu/Add1.png",
+            icon: "icons/menu/Add1.png",
             action: "new-folder"
         },
         {
             label: "新建文件",
-            icon: "/icons/menu/Add To1.png",
+            icon: "icons/menu/Add To1.png",
             action: "new-file"
         },
         { isDivider: true },
         {
             label: "属性",
-            icon: "/icons/menu/Info.png",
+            icon: "icons/menu/Info.png",
             action: "properties"
         },
     ]);

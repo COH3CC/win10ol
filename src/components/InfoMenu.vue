@@ -7,11 +7,11 @@
                     <button class="info-popup-menu-info-top-tabar-btn-button quiet-hours-btn" @click="toggleTheme"
                         :class="{ 'active': isNightMode }">
                         <img class="info-popup-menu-info-top-tabar-btn-button-img"
-                            src="/icons/system/Quiet Hours.png" />
+                            src="icons/system/Quiet Hours.png" />
                     </button>
                     <button class="info-popup-menu-info-top-tabar-btn-button"
                         @click="notificationStore.clearAllSystem()">
-                        <img class="info-popup-menu-info-top-tabar-btn-button-img" src="/icons/system/Delete.png" />
+                        <img class="info-popup-menu-info-top-tabar-btn-button-img" src="icons/system/Delete.png" />
                     </button>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                                         <button class="info-popup-menu-info-top-view-info-top-r-btn"
                                             @click.stop="removeSingle(String(n.id))" @mousedown.stop @touchstart.stop>
                                             <img class="info-popup-menu-info-top-view-info-top-r-btn-img"
-                                                src="/icons/system/Cancel.png" />
+                                                src="icons/system/Cancel.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                         <button class="info-popup-menu-info-top-view-info-top-r-btn"
                                             @click.stop="removeGroup(String(source))" @mousedown.stop @touchstart.stop>
                                             <img class="info-popup-menu-info-top-view-info-top-r-btn-img"
-                                                src="/icons/system/Cancel.png" />
+                                                src="icons/system/Cancel.png" />
                                         </button>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                             notifications.length - 1 }}
                                             条通知</span>
                                         <img class="info-popup-menu-info-top-view-info-2-low-more-info-img"
-                                            src="/icons/system/Chevron Down.png" />
+                                            src="icons/system/Chevron Down.png" />
                                     </button>
                                 </div>
                             </div>
@@ -116,27 +116,27 @@
         <div class="info-popup-menu-info-low">
             <div class="info-popup-menu-info-low-1">
                 <div class="info-popup-menu-info-low-1-l">
-                    <img class="info-popup-menu-info-low-1-img" src="/icons/system/Battery 10.png" />
+                    <img class="info-popup-menu-info-low-1-img" src="icons/system/Battery 10.png" />
                     <span class="info-popup-menu-info-low-1-l-info">100%</span>
                 </div>
                 <div class="info-popup-menu-info-low-1-r">
-                    <img class="info-popup-menu-info-low-1-img-2" src="/icons/system/Setting.png" />
+                    <img class="info-popup-menu-info-low-1-img-2" src="icons/system/Setting.png" />
                 </div>
             </div>
             <div class="info-popup-menu-info-low-2">
-                <img class="info-popup-menu-info-low-2-img" src="/icons/system/Brightness.png" />
+                <img class="info-popup-menu-info-low-2-img" src="icons/system/Brightness.png" />
                 <div class="info-popup-menu-info-low-2-slider-box">
                     <input type="range" class="win10-slider" min="20" max="100" v-model="brightness"
                         :style="{ backgroundSize: ((brightness - 20) / 80 * 100) + '% 100%' }">
                 </div>
             </div>
             <div class="info-popup-menu-info-low-3">
-                <img class="info-popup-menu-info-low-2-img" src="/icons/system/Volume 3.png" />
+                <img class="info-popup-menu-info-low-2-img" src="icons/system/Volume 3.png" />
                 <div class="info-popup-menu-info-low-2-slider-box">
                     <input type="range" class="win10-slider" min="0" max="100" v-model="volume"
                         :style="{ backgroundSize: volume + '% 100%' }">
                 </div>
-                <img class="info-popup-menu-info-low-3-img2" src="/icons/system/Mix Volumes.png"></img>
+                <img class="info-popup-menu-info-low-3-img2" src="icons/system/Mix Volumes.png"></img>
             </div>
             <div class="info-popup-menu-info-low-4">
                 <button class="info-popup-menu-info-low-4-btn">展开</button>
@@ -145,9 +145,9 @@
                 <button class="info-popup-menu-info-low-5-btn" @click="toggleAction('network')"
                     :class="{ 'active': actionStates.network }">
                     <div class="info-popup-menu-info-low-5-btn-imgbox">
-                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="/icons/system/Wifi.png">
+                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="icons/system/Wifi.png">
                         <img class="info-popup-menu-info-low-5-btn-imgbox-img"
-                            src="/icons/system/Cheveron Right 20.png">
+                            src="icons/system/Cheveron Right 20.png">
                     </div>
                     <div class="info-popup-menu-info-low-5-btn-info">
                         <span class="info-popup-menu-info-low-5-btn-info-info">网络</span>
@@ -156,9 +156,9 @@
                 <button class="info-popup-menu-info-low-5-btn" @click="toggleAction('bluetooth')"
                     :class="{ 'active': actionStates.bluetooth }">
                     <div class="info-popup-menu-info-low-5-btn-imgbox">
-                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="/icons/system/Bluetooth.png">
+                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="icons/system/Bluetooth.png">
                         <img class="info-popup-menu-info-low-5-btn-imgbox-img"
-                            src="/icons/system/Cheveron Right 20.png">
+                            src="icons/system/Cheveron Right 20.png">
                     </div>
                     <div class="info-popup-menu-info-low-5-btn-info">
                         <span class="info-popup-menu-info-low-5-btn-info-info">蓝牙</span>
@@ -167,9 +167,9 @@
                 <button class="info-popup-menu-info-low-5-btn" @click="toggleSystemTheme"
                     :class="{ 'active': theme === 'dark' }">
                     <div class="info-popup-menu-info-low-5-btn-imgbox">
-                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="/icons/system/Light.png">
+                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="icons/system/Light.png">
                         <img class="info-popup-menu-info-low-5-btn-imgbox-img"
-                            src="/icons/system/Cheveron Right 20.png">
+                            src="icons/system/Cheveron Right 20.png">
                     </div>
                     <div class="info-popup-menu-info-low-5-btn-info">
                         <span class="info-popup-menu-info-low-5-btn-info-info">深色模式</span>
@@ -178,9 +178,9 @@
                 <button class="info-popup-menu-info-low-5-btn" @click="toggleAction('airplane')"
                     :class="{ 'active': actionStates.airplane }">
                     <div class="info-popup-menu-info-low-5-btn-imgbox">
-                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="/icons/system/Airplane.png">
+                        <img class="info-popup-menu-info-low-5-btn-imgbox-img" src="icons/system/Airplane.png">
                         <img class="info-popup-menu-info-low-5-btn-imgbox-img"
-                            src="/icons/system/Cheveron Right 20.png">
+                            src="icons/system/Cheveron Right 20.png">
                     </div>
                     <div class="info-popup-menu-info-low-5-btn-info">
                         <span class="info-popup-menu-info-low-5-btn-info-info">飞行模式</span>
@@ -351,13 +351,13 @@ const expandSource = (source: string) => {
 };
 
 const getSourceIcon = (source: string) => {
-    if (!source) return '/icons/system/System.png';
+    if (!source) return 'icons/system/System.png';
     switch (source) {
-        case '日程': return '/icons/system/Calendar.png';
-        case '系统': return '/icons/system/System.png';
-        case '设置': return '/icons/system/Setting.png';
-        case '应用': return '/icons/system/System.png';
-        default: return '/icons/system/System.png';
+        case '日程': return 'icons/system/Calendar.png';
+        case '系统': return 'icons/system/System.png';
+        case '设置': return 'icons/system/Setting.png';
+        case '应用': return 'icons/system/System.png';
+        default: return 'icons/system/System.png';
     }
 };
 </script>
