@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coh3cc.github.io/win10ol/sitemap.xml
