@@ -828,7 +828,7 @@ const showThemeModeDropdown = ref(false);
 const activeFloatBlockColor = ref(systemStore.theme === 'light' ? '#ffffffa9' : '#000000a9');
 
 // --- UI State: System Info ---
-const showWinVersion = ref(false);
+const showWinVersion = ref(true);
 const showDeviceInfo = ref(false);
 
 // --- Methods: Navigation ---

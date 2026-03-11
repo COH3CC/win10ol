@@ -77,6 +77,19 @@
                         <p class="legal-text">本项目仅用于个人技术研究与 UI 设计交流。所有涉及 Microsoft、Windows 的商标、图标及视觉设计的所有权均归 Microsoft Corporation 所有。</p>
                     </div>
                 </div>
+
+                <!-- 新增：开源地址卡片 -->
+                <div class="repo-card" @click="openLink('https://github.com/COH3CC/win10ol')" role="button" title="打开开源仓库">
+                    <div class="repo-left">
+                        <i class="icon-repo"></i>
+                    </div>
+                    <div class="repo-content">
+                        <div class="repo-title">开源地址</div>
+                        <div class="repo-link">https://github.com/COH3CC/win10ol</div>
+                    </div>
+                    <div class="repo-action">前往</div>
+                </div>
+
             </div>
         </div>
 
@@ -289,6 +302,58 @@ const openLink = (url: string) => {
     color: #888;
 }
 
+/* 开源地址卡片样式 */
+.repo-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    user-select: none;
+}
+
+.repo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.repo-left {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: #f0f6fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0078d7;
+    font-weight: 700;
+}
+
+.repo-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.repo-link {
+    font-size: 12px;
+    color: #0078d7;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+.repo-action {
+    margin-left: auto;
+    font-size: 12px;
+    color: #666;
+    background: #f6f9fc;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
 /* 法律信息 */
 .legal-section {
     background: rgba(0, 120, 215, 0.05);
@@ -354,7 +419,8 @@ const openLink = (url: string) => {
 }
 
 .dark-theme .info-card,
-.dark-theme .member-card {
+.dark-theme .member-card,
+.dark-theme .repo-card {
     background-color: #252525;
     border-color: #333;
 }
