@@ -316,7 +316,7 @@ export const useFileSystemStore = defineStore("fileSystem", () => {
                     parentId: "desktop",
                     name: "关于项目",
                     type: "app",
-                    icon: "$'{publicPath}appicons/about.png'",
+                    icon: "/appicons/about.png",
                     updatedAt: DEFAULT_DATE,
                 },
                 {

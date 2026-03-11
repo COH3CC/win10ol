@@ -85,8 +85,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: APP_IDS.FILE_EXPLORER,
             title: "此电脑",
-            icon: "'${publicPath}appicons/computer.png'",
-            taskbarIcon: "'${publicPath}appicons/File Explorer.png'",
+            icon: "/appicons/computer.png",
+            taskbarIcon: "/appicons/File Explorer.png",
             component: shallowRef(FileExplorer),
             windowConfig: {
                 defaultWidth: 975,
@@ -97,8 +97,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: APP_IDS.WIN_SETTING,
             title: "设置",
-            icon: "'${publicPath}appicons/Setting.png'",
-            taskbarIcon: "'${publicPath}appicons/Setting.png'",
+            icon: "/appicons/Setting.png",
+            taskbarIcon: "/appicons/Setting.png",
             component: shallowRef(WinSetting),
             windowConfig: {
                 defaultWidth: 1000,
@@ -109,8 +109,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: APP_IDS.WIN_ABOUT,
             title: "关于项目",
-            icon: "'${publicPath}appicons/about.png'",
-            taskbarIcon: "'${publicPath}appicons/about.png'",
+            icon: "/appicons/about.png",
+            taskbarIcon: "/appicons/about.png",
             component: shallowRef(WinAbout),
             windowConfig: {
                 defaultWidth: 600,
@@ -121,8 +121,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: APP_IDS.TXT_READER,
             title: "记事本",
-            icon: "'${publicPath}appicons/Notepad.png'",
-            taskbarIcon: "${publicPath}appicons/Notepad.png",
+            icon: "/appicons/Notepad.png",
+            taskbarIcon: "/appicons/Notepad.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 1000,
@@ -133,8 +133,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: "Mincrosoft Access",
             title: "Access",
-            icon: "'${publicPath}appicons/Access.png'",
-            taskbarIcon: "'${publicPath}appicons/Access.png'",
+            icon: "/appicons/Access.png",
+            taskbarIcon: "/appicons/Access.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 975,
@@ -145,8 +145,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: "Mincrosoft Excel",
             title: "Excel",
-            icon: "'${publicPath}appicons/Excel.png'",
-            taskbarIcon: "'${publicPath}appicons/Excel.png'",
+            icon: "/appicons/Excel.png",
+            taskbarIcon: "/appicons/Excel.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 975,
@@ -157,8 +157,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: "Mincrosoft PowerPoint",
             title: "PowerPoint",
-            icon: "'${publicPath}appicons/PowerPoint.png'",
-            taskbarIcon: "'${publicPath}appicons/PowerPoint.png'",
+            icon: "/appicons/PowerPoint.png",
+            taskbarIcon: "/appicons/PowerPoint.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 975,
@@ -169,8 +169,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: APP_IDS.FILE_EXPLORER,
             title: "文件管理器",
-            icon: "'${publicPath}appicons/File Explorer.png'",
-            taskbarIcon: "'${publicPath}appicons/File Explorer.png'",
+            icon: "/appicons/File Explorer.png",
+            taskbarIcon: "/appicons/File Explorer.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 975,
@@ -181,8 +181,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: "Microsoft Edge",
             title: "Edge",
-            icon: "'${publicPath}appicons/Microsoft Edge.png'",
-            taskbarIcon: "'${publicPath}appicons/Microsoft Edge.png'",
+            icon: "/appicons/Microsoft Edge.png",
+            taskbarIcon: "/appicons/Microsoft Edge.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 1100,
@@ -193,8 +193,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             componentName: "Windows Terminal",
             title: "终端",
-            icon: "'${publicPath}appicons/Windows Terminal.png'",
-            taskbarIcon: "'${publicPath}appicons/Windows Terminal.png'",
+            icon: "/appicons/Windows Terminal.png",
+            taskbarIcon: "/appicons/Windows Terminal.png",
             component: shallowRef(txtreader),
             windowConfig: {
                 defaultWidth: 800,
@@ -288,27 +288,27 @@ export const useSystemStore = defineStore("system", () => {
         {
             id: "start",
             name: "开始",
-            icon: "'${publicPath}icons/Global Navigation Button.png'",
+            icon: "/icons/Global Navigation Button.png",
             actionName: "toggleSubMenu",
         },
         {
             id: "user",
             name: "Guest",
-            icon: "'${publicPath}icons/Contact.png'",
+            icon: "/icons/Contact.png",
             actionName: "noop",
         },
-        { id: "docs", name: "文档", icon: "'${publicPath}icons/Page.png'", actionName: "noop" },
-        { id: "pics", name: "图片", icon: "'${publicPath}icons/Photo 2.png'", actionName: "noop" },
+        { id: "docs", name: "文档", icon: "/icons/Page.png", actionName: "noop" },
+        { id: "pics", name: "图片", icon: "/icons/Photo 2.png", actionName: "noop" },
         {
             id: "settings",
             name: "设置",
-            icon: "'${publicPath}icons/Setting.png'",
+            icon: "/icons/Setting.png",
             actionName: "openSettings",
         },
         {
             id: "power",
             name: "电源",
-            icon: "'${publicPath}icons/Power Button.png'",
+            icon: "/icons/Power Button.png",
             actionName: "logout",
         },
     ]);
@@ -316,8 +316,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             id: "start",
             name: "开始",
-            icon: "'${publicPath}icons/system/Windows 10.png'",
-            hoverIcon: "'${publicPath}icons/system/Windows 10X.png'",
+            icon: "/icons/system/Windows 10.png",
+            hoverIcon: "/icons/system/Windows 10X.png",
             iconSize: 18,
             hoverIconSize: 18,
             class: "open",
@@ -326,8 +326,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             id: "search",
             name: "搜索",
-            icon: "'${publicPath}icons/system/Search1.png'",
-            hoverIcon: "'${publicPath}icons/system/Search.png'",
+            icon: "/icons/system/Search1.png",
+            hoverIcon: "/icons/system/Search.png",
             iconSize: 18,
             hoverIconSize: 18,
             class: "",
@@ -336,8 +336,8 @@ export const useSystemStore = defineStore("system", () => {
         {
             id: "taskview",
             name: "任务视图",
-            icon: "'${publicPath}icons/system/Task View1.png'",
-            hoverIcon: "'${publicPath}icons/system/Task View.png'",
+            icon: "/icons/system/Task View1.png",
+            hoverIcon: "/icons/system/Task View.png",
             iconSize: 18,
             hoverIconSize: 18,
             class: "",
@@ -361,9 +361,9 @@ export const useSystemStore = defineStore("system", () => {
             id: "aibtn",
             class: "tibar-right-aibtn",
             actionName: "toggleAiMenu",
-            icon: "'${publicPath}icons/system/Cortana Black.png'",
-            darkIcon: "'${publicPath}icons/system/Cortana Dark.png'",
-            hoverIcon: "'${publicPath}icons/system/Cortana Blue.png'",
+            icon: "/icons/system/Cortana Black.png",
+            darkIcon: "/icons/system/Cortana Dark.png",
+            hoverIcon: "/icons/system/Cortana Blue.png",
             imgClass: "tibar-right-aibtn-img",
         },
     ]);
