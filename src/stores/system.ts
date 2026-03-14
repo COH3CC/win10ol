@@ -361,9 +361,9 @@ export const useSystemStore = defineStore("system", () => {
             id: "aibtn",
             class: "tibar-right-aibtn",
             actionName: "toggleAiMenu",
-            icon: "/icons/system/Cortana Black.png",
+            icon: "/icons/system/Cortana 1.png",
             darkIcon: "/icons/system/Cortana Dark.png",
-            hoverIcon: "/icons/system/Cortana Blue.png",
+            hoverIcon: "/icons/system/Cortana 2.png",
             imgClass: "tibar-right-aibtn-img",
         },
     ]);
