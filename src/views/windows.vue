@@ -94,7 +94,7 @@
 
                     <TransitionGroup name="window-fade">
                         <div class="app-window" v-for="win in openWindows" :key="win.id" :style="{
-                            transform: `translate3d(${win.left}px, ${win.top}px, 0)`,
+                            transform: `translate(${win.left}px, ${win.top}px)`,
                             zIndex: win.zIndex,
                             width: win.width + 'px',
                             height: win.height + 'px',
@@ -104,7 +104,8 @@
                                 'is-active': win.zIndex === zIndex,
                                 'is-maximized': win.isMaximized || win.snapState !== 'none',
                                 'is-dragging': (systemStore as any).dragState?.id === win.id,
-                                'is-resizing': (systemStore as any).resizeState?.id === win.id
+                                'is-resizing': (systemStore as any).resizeState?.id === win.id,
+                                'is-restoring': win.isRestoring
                             }">
 
                             <component :is="win.component" :window-id="win.id" :is-maximized="win.isMaximized"
@@ -928,8 +929,9 @@ const vFocus = { mounted: (el: HTMLInputElement) => el.focus() };
     overflow: hidden;
 }
 .app-window.is-dragging,
-.app-window.is-resizing {
-    /* 拖拽和缩放时禁用过渡以保证流畅度 */
+.app-window.is-resizing,
+.app-window.is-restoring {
+    /* 拖拽、缩放和从最小化恢复时禁用过渡，防止窗口从 (0,0) 飞入正确位置 */
     transition: none !important;
 }
 .app-window.is-active {

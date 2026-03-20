@@ -43,6 +43,8 @@ export interface WindowInstance {
     props?: any;
     // 应用绑定的右键菜单类型，null 表示该应用不支持右键菜单
     contextMenuType: AppContextMenuType;
+    // 从最小化恢复时的瞬态标志，用于跳过 transform 过渡动画，防止窗口从左上角飞入
+    isRestoring?: boolean;
 }
 interface AppWindowConfig {
     defaultWidth?: number;
@@ -269,7 +271,7 @@ export const useSystemStore = defineStore("system", () => {
             openWindow(item.componentName, item.title);
         } else if (win.isMinimized) {
             // 如果窗口已最小化，恢复显示并置顶
-            win.isMinimized = false;
+            // win.isMinimized = false; // 已在 bringToFront 中处理
             bringToFront(win.id);
         } else {
             // 如果窗口已在桌面
@@ -729,7 +731,21 @@ export const useSystemStore = defineStore("system", () => {
         const win = openWindows.value.find((w) => w.id === id);
         if (win) {
             win.zIndex = zIndex.value;
-            if (win.isMinimized) win.isMinimized = false;
+            if (win.isMinimized) {
+                // 恢复最小化：先设置 isRestoring 禁用 transform 过渡，
+                // 确保窗口直接出现在最小化前的位置，而不是从 (0,0) 飞入。
+                // 使用双重 rAF：第一帧让 Vue 将元素从 display:none 变为可见并完成
+                // DOM layout；第二帧浏览器完成首次 paint 后再清除标志，
+                // 避免 transition 从 (0,0) 过渡到正确坐标的"飞入"问题。
+                win.isRestoring = true;
+                win.isMinimized = false;
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        const w = openWindows.value.find((w) => w.id === id);
+                        if (w) w.isRestoring = false;
+                    });
+                });
+            }
         }
     };
     const openWindow = (
@@ -747,7 +763,6 @@ export const useSystemStore = defineStore("system", () => {
                 existingWindow.props = { ...existingWindow.props, ...props };
             }
             // 恢复并置顶
-            if (existingWindow.isMinimized) existingWindow.isMinimized = false;
             bringToFront(existingWindow.id);
             return;
         }
@@ -796,7 +811,9 @@ export const useSystemStore = defineStore("system", () => {
     };
     const minimizeWindow = (id: number) => {
         const win = openWindows.value.find((w) => w.id === id);
-        if (win) win.isMinimized = true;
+        if (win) {
+            win.isMinimized = true;
+        }
     };
     const toggleMaximizeWindow = (id: number) => {
         const win = openWindows.value.find((w) => w.id === id);
@@ -952,10 +969,26 @@ export const useSystemStore = defineStore("system", () => {
                 win.left = newLeft;
                 win.top = newTop;
             }
+
+            // 实时同步 restore 属性，确保最小化时能正确保存当前位置
+            if (!win.isMaximized && win.snapState === "none") {
+                win.restoreTop = win.top;
+                win.restoreLeft = win.left;
+            }
         };
 
         const onMouseUp = (upEvent: MouseEvent) => {
             handleWindowSnap(id, upEvent.clientX, upEvent.clientY); // 松开时判断是否吸附
+            
+            // 拖拽结束时同步 restore 属性，防止最小化恢复时位置丢失
+            const win = openWindows.value.find((w) => w.id === id);
+            if (win && !win.isMaximized && win.snapState === "none") {
+                win.restoreTop = win.top;
+                win.restoreLeft = win.left;
+                win.restoreWidth = win.width;
+                win.restoreHeight = win.height;
+            }
+
             document.removeEventListener("mousemove", onMouseMove);
             document.removeEventListener("mouseup", onMouseUp);
         };
