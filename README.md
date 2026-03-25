@@ -60,7 +60,7 @@ Windows 10 26H2 Concept (Windows on Web)
 - Icons: 应用图标: Microsoft 官方 / 戌犬·朱狼 (根据 Fluent Design 风格仿制)，线性图标: Segoe MDL2 Assets
 
 ## 下载方式
-将这个项目包 git clone 到你要存储的位置中，然后从项目包启动 CMD 以执行之后的操作。
+将这个项目包直接下载（点击 “Download ZIP”） 或者 git clone 到你要存储的位置中，然后从项目包启动 CMD 以执行之后的操作。
 
 ## 快速启动
 
